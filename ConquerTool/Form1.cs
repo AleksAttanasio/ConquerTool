@@ -20,7 +20,7 @@ namespace ConquerTool
 
         private void infoButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Creato da JeremyReevo per i membri dell'ICDZ");
+            MessageBox.Show("Creato da JeremyReevo per i membri dell'ICDZ\n Versione: v.1.3");
         }
 
         public void evaluateButton_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace ConquerTool
                 {
                     DateTime atDate = TimeEvaluation.GetArrivalTime(Convert.ToInt32(hoursText.Text), Convert.ToInt32(minutesText.Text),
                                                 Convert.ToInt32(secondText.Text), Convert.ToInt32(xText.Text), Convert.ToInt32(yText.Text),
-                                                Fakelist[i, k], Fakelist[i, k + 1], 0, 3);
+                                                Fakelist[i, k], Fakelist[i, k + 1], Convert.ToInt32(textArena.Text), 3);
 
                     Attack newAt = new Attack(Fakelist[i, k], Fakelist[i, k + 1], atDate, Attack.Type.FAKE);
                     if (!attackList.Contains(newAt))
@@ -78,7 +78,7 @@ namespace ConquerTool
                 {
                     DateTime atDate = TimeEvaluation.GetArrivalTime(Convert.ToInt32(hoursText.Text), Convert.ToInt32(minutesText.Text),
                                                 Convert.ToInt32(secondText.Text), Convert.ToInt32(xText.Text), Convert.ToInt32(yText.Text),
-                                                Fakelist[i, k], Fakelist[i, k + 1], 0, 3);
+                                                Fakelist[i, k], Fakelist[i, k + 1], Convert.ToInt32(textArena.Text), 3);
 
                     Attack newAt = new Attack(Fakelist[i, k], Fakelist[i, k + 1], atDate, Attack.Type.FAKE);
                     if (!attackList.Contains(newAt))
@@ -90,7 +90,7 @@ namespace ConquerTool
                 {
                     DateTime atDate = TimeEvaluation.GetArrivalTime(Convert.ToInt32(hoursText.Text), Convert.ToInt32(minutesText.Text),
                                                 Convert.ToInt32(secondText.Text), Convert.ToInt32(xText.Text), Convert.ToInt32(yText.Text),
-                                                ConquerList[i, k], ConquerList[i, k + 1], 0, 3);
+                                                ConquerList[i, k], ConquerList[i, k + 1], Convert.ToInt32(textArena.Text), 3);
 
                     Attack newAt = new Attack(ConquerList[i, k], ConquerList[i, k + 1], atDate, Attack.Type.CONQUISTA);
                     if (!attackList.Contains(newAt))

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.infoButton = new System.Windows.Forms.Button();
             this.commandsLabel = new System.Windows.Forms.Label();
             this.commandsText = new System.Windows.Forms.RichTextBox();
@@ -47,6 +48,8 @@
             this.textPath = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.helpPath = new System.Windows.Forms.Button();
+            this.textArena = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // infoButton
@@ -54,7 +57,7 @@
             this.infoButton.Location = new System.Drawing.Point(385, 12);
             this.infoButton.Name = "infoButton";
             this.infoButton.Size = new System.Drawing.Size(23, 23);
-            this.infoButton.TabIndex = 0;
+            this.infoButton.TabIndex = 11;
             this.infoButton.Text = "?";
             this.infoButton.UseVisualStyleBackColor = true;
             this.infoButton.Click += new System.EventHandler(this.infoButton_Click);
@@ -116,7 +119,7 @@
             this.hoursText.Location = new System.Drawing.Point(197, 293);
             this.hoursText.Name = "hoursText";
             this.hoursText.Size = new System.Drawing.Size(32, 20);
-            this.hoursText.TabIndex = 2;
+            this.hoursText.TabIndex = 3;
             // 
             // secondText
             // 
@@ -124,7 +127,7 @@
             this.secondText.Location = new System.Drawing.Point(273, 293);
             this.secondText.Name = "secondText";
             this.secondText.Size = new System.Drawing.Size(32, 20);
-            this.secondText.TabIndex = 4;
+            this.secondText.TabIndex = 5;
             // 
             // minutesText
             // 
@@ -132,7 +135,7 @@
             this.minutesText.Location = new System.Drawing.Point(235, 293);
             this.minutesText.Name = "minutesText";
             this.minutesText.Size = new System.Drawing.Size(32, 20);
-            this.minutesText.TabIndex = 3;
+            this.minutesText.TabIndex = 4;
             // 
             // label4
             // 
@@ -150,7 +153,7 @@
             this.xText.Location = new System.Drawing.Point(263, 323);
             this.xText.Name = "xText";
             this.xText.Size = new System.Drawing.Size(32, 20);
-            this.xText.TabIndex = 5;
+            this.xText.TabIndex = 7;
             // 
             // yText
             // 
@@ -158,7 +161,7 @@
             this.yText.Location = new System.Drawing.Point(301, 323);
             this.yText.Name = "yText";
             this.yText.Size = new System.Drawing.Size(32, 20);
-            this.yText.TabIndex = 6;
+            this.yText.TabIndex = 8;
             // 
             // saveTxtButton
             // 
@@ -166,7 +169,7 @@
             this.saveTxtButton.Location = new System.Drawing.Point(301, 358);
             this.saveTxtButton.Name = "saveTxtButton";
             this.saveTxtButton.Size = new System.Drawing.Size(103, 31);
-            this.saveTxtButton.TabIndex = 7;
+            this.saveTxtButton.TabIndex = 10;
             this.saveTxtButton.Text = "Crea file .txt";
             this.saveTxtButton.UseVisualStyleBackColor = true;
             this.saveTxtButton.Click += new System.EventHandler(this.saveTxtButton_Click);
@@ -178,7 +181,7 @@
             this.conquerList.Name = "conquerList";
             this.conquerList.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.conquerList.Size = new System.Drawing.Size(387, 50);
-            this.conquerList.TabIndex = 13;
+            this.conquerList.TabIndex = 2;
             this.conquerList.Text = "";
             // 
             // label5
@@ -196,7 +199,7 @@
             this.helpFake.Location = new System.Drawing.Point(228, 49);
             this.helpFake.Name = "helpFake";
             this.helpFake.Size = new System.Drawing.Size(23, 23);
-            this.helpFake.TabIndex = 15;
+            this.helpFake.TabIndex = 12;
             this.helpFake.Text = "?";
             this.helpFake.UseVisualStyleBackColor = true;
             this.helpFake.Click += new System.EventHandler(this.helpFake_Click);
@@ -207,7 +210,7 @@
             this.textPath.Location = new System.Drawing.Point(76, 364);
             this.textPath.Name = "textPath";
             this.textPath.Size = new System.Drawing.Size(187, 20);
-            this.textPath.TabIndex = 16;
+            this.textPath.TabIndex = 9;
             this.textPath.Text = "C:\\Users\\";
             // 
             // label6
@@ -225,16 +228,36 @@
             this.helpPath.Location = new System.Drawing.Point(269, 362);
             this.helpPath.Name = "helpPath";
             this.helpPath.Size = new System.Drawing.Size(23, 23);
-            this.helpPath.TabIndex = 18;
+            this.helpPath.TabIndex = 13;
             this.helpPath.Text = "?";
             this.helpPath.UseVisualStyleBackColor = true;
             this.helpPath.Click += new System.EventHandler(this.helpPath_Click);
+            // 
+            // textArena
+            // 
+            this.textArena.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textArena.Location = new System.Drawing.Point(367, 293);
+            this.textArena.Name = "textArena";
+            this.textArena.Size = new System.Drawing.Size(32, 20);
+            this.textArena.TabIndex = 6;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(323, 296);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Arena:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(417, 401);
+            this.Controls.Add(this.textArena);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.helpPath);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textPath);
@@ -254,11 +277,11 @@
             this.Controls.Add(this.commandsText);
             this.Controls.Add(this.commandsLabel);
             this.Controls.Add(this.infoButton);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(433, 440);
+            this.MinimumSize = new System.Drawing.Size(433, 440);
             this.Name = "Form1";
-            this.ShowIcon = false;
-            this.Text = "Conquer Tool";
+            this.Text = "Conquer Tool (v1.4)";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,6 +308,8 @@
         private System.Windows.Forms.TextBox textPath;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button helpPath;
+        private System.Windows.Forms.TextBox textArena;
+        private System.Windows.Forms.Label label7;
     }
 }
 
