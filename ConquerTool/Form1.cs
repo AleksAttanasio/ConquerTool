@@ -73,6 +73,7 @@ namespace ConquerTool
                 int[,] Fakelist = Methods.ReadCommandList(commandsText.Text);
                 int[,] ConquerList = Methods.ReadCommandList(conquerList.Text);
                 int k = 0;
+
                 for (int i = 0; i < Fakelist.GetLength(0); i++)
                 {
                     DateTime atDate = TimeEvaluation.GetArrivalTime(Convert.ToInt32(hoursText.Text), Convert.ToInt32(minutesText.Text),

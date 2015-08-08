@@ -27,9 +27,9 @@ namespace ConquerToolMethod
 
             foreach (string cmd in singleCommand)
             {
-                startIndex = command.IndexOf('(');
-                middleIndex = command.IndexOf('|');
-                endIndex = command.IndexOf(')');
+                startIndex = cmd.IndexOf('(');
+                middleIndex = cmd.IndexOf('|');
+                endIndex = cmd.IndexOf(')');
                 firstLength = middleIndex - startIndex; // x
                 secondLength = endIndex - middleIndex; // y
 
