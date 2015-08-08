@@ -98,14 +98,38 @@ namespace ConquerTool
                         attackList.Add(newAt);
                     }
                 }
-                
-                Methods.SaveAttackList(attackList);
+
+                try
+                {
+                    Methods.SaveAttackListAddress(attackList, textPath.Text);
+                }
+                catch(Exception)
+                {
+                    MessageBox.Show("Errore nel percorso. Controlla!");
+                }
             }
             catch (Exception)
             {
                 MessageBox.Show("Errore di inserimento dati! Controlla le coordinate!");
             }
 
+        }
+
+        private void helpFake_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("ATTENZIONE!\n" +
+                            "Il corretto inserimento dei dati prevede che non siano presenti righe vuote alla fine della lista," +
+                            " prestate quindi attenzione che la barretta di inserimento testo si trovi alla destra dell'ultima" +
+                            " parentesi e non sotto.\n È possibile inserire direttamente tutto l'ordine di attaco compresi del nome" +
+                            " dei villaggi il programma è in grado di identificare le coordinate a patto che si trovino nel formato (x|y)." +
+                            " Le parentesi e la barretta in mezzo sono necessarie.");
+        }
+
+        private void helpPath_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+                "Il corretto inserimento dei percorso prevede un percorso fisso del tipo \"C:\\Users\" al quale dovrà essere aggiunto," +
+                " se desiderato, il percorso della cartella dove si vuole salvare il piano.");
         }
     }
 }

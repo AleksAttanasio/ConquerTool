@@ -40,10 +40,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.xText = new System.Windows.Forms.TextBox();
             this.yText = new System.Windows.Forms.TextBox();
-            this.evaluateButton = new System.Windows.Forms.Button();
             this.saveTxtButton = new System.Windows.Forms.Button();
             this.conquerList = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.helpFake = new System.Windows.Forms.Button();
+            this.textPath = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.helpPath = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // infoButton
@@ -157,21 +160,10 @@
             this.yText.Size = new System.Drawing.Size(32, 20);
             this.yText.TabIndex = 6;
             // 
-            // evaluateButton
-            // 
-            this.evaluateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.evaluateButton.Location = new System.Drawing.Point(302, 358);
-            this.evaluateButton.Name = "evaluateButton";
-            this.evaluateButton.Size = new System.Drawing.Size(103, 31);
-            this.evaluateButton.TabIndex = 8;
-            this.evaluateButton.Text = "Calcola";
-            this.evaluateButton.UseVisualStyleBackColor = true;
-            this.evaluateButton.Click += new System.EventHandler(this.evaluateButton_Click);
-            // 
             // saveTxtButton
             // 
             this.saveTxtButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveTxtButton.Location = new System.Drawing.Point(192, 358);
+            this.saveTxtButton.Location = new System.Drawing.Point(301, 358);
             this.saveTxtButton.Name = "saveTxtButton";
             this.saveTxtButton.Size = new System.Drawing.Size(103, 31);
             this.saveTxtButton.TabIndex = 7;
@@ -199,15 +191,57 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Incolla qui la comanda dell\'ordine di attacco di conquista:";
             // 
+            // helpFake
+            // 
+            this.helpFake.Location = new System.Drawing.Point(228, 49);
+            this.helpFake.Name = "helpFake";
+            this.helpFake.Size = new System.Drawing.Size(23, 23);
+            this.helpFake.TabIndex = 15;
+            this.helpFake.Text = "?";
+            this.helpFake.UseVisualStyleBackColor = true;
+            this.helpFake.Click += new System.EventHandler(this.helpFake_Click);
+            // 
+            // textPath
+            // 
+            this.textPath.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textPath.Location = new System.Drawing.Point(76, 364);
+            this.textPath.Name = "textPath";
+            this.textPath.Size = new System.Drawing.Size(187, 20);
+            this.textPath.TabIndex = 16;
+            this.textPath.Text = "C:\\Users\\";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(18, 367);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Percorso:";
+            // 
+            // helpPath
+            // 
+            this.helpPath.Location = new System.Drawing.Point(269, 362);
+            this.helpPath.Name = "helpPath";
+            this.helpPath.Size = new System.Drawing.Size(23, 23);
+            this.helpPath.TabIndex = 18;
+            this.helpPath.Text = "?";
+            this.helpPath.UseVisualStyleBackColor = true;
+            this.helpPath.Click += new System.EventHandler(this.helpPath_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(417, 401);
+            this.Controls.Add(this.helpPath);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textPath);
+            this.Controls.Add(this.helpFake);
             this.Controls.Add(this.conquerList);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.saveTxtButton);
-            this.Controls.Add(this.evaluateButton);
             this.Controls.Add(this.xText);
             this.Controls.Add(this.yText);
             this.Controls.Add(this.label4);
@@ -244,10 +278,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox xText;
         private System.Windows.Forms.TextBox yText;
-        private System.Windows.Forms.Button evaluateButton;
         private System.Windows.Forms.Button saveTxtButton;
         private System.Windows.Forms.RichTextBox conquerList;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button helpFake;
+        private System.Windows.Forms.TextBox textPath;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button helpPath;
     }
 }
 

@@ -66,6 +66,29 @@ namespace ConquerToolMethod
             }
         }
 
+        public static void SaveAttackListAddress(List<Attack> attackList, string address)
+        {
+            SortAscending(attackList);
+            DateTime now = DateTime.Now;
+            string fileName = "Lista_Attacchi" + DateTime.Now.Day + "_" + DateTime.Now.Month + "_" +
+                                +DateTime.Now.Year + "__" + DateTime.Now.Hour + "." + DateTime.Now.Minute + "." +
+                                +DateTime.Now.Second + ".txt";
+
+            string addressFile = address + @"\" + fileName;
+
+            using (StreamWriter newLog = new StreamWriter(@addressFile, true))
+            {
+                foreach (Attack attk in attackList)
+                {
+                    newLog.WriteLine("(" + attk.AttackType + ")");
+                    newLog.WriteLine(attk.DestionationX + "|" + attk.DestinationY + " --> Partenza: " + attk.StartHour.Hour +
+                                        ":" + attk.StartHour.Minute + ":" + attk.StartHour.Second + " il " + attk.StartHour.Day +
+                                        "/" + attk.StartHour.Month);
+                    newLog.WriteLine();
+                }
+            }
+        }
+
         public static List<Attack> SortAscending(List<Attack> list)
         {
             list.Sort((a, b) => a.StartHour.CompareTo(b.StartHour));
