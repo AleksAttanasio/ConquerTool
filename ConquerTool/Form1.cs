@@ -98,7 +98,7 @@ namespace ConquerTool
                         attackList.Add(newAt);
                     }
                 }
-
+                
                 Methods.SaveAttackList(attackList);
             }
             catch (Exception)
