@@ -20,7 +20,7 @@ namespace ConquerTool
 
         private void infoButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Creato da JeremyReevo per i membri dell'ICDZ\n Versione: v.1.3");
+            MessageBox.Show("Creato da JeremyReevo per i membri dell'ICDZ\n");
         }
 
         public void evaluateButton_Click(object sender, EventArgs e)
